@@ -1,0 +1,37 @@
+# Dataset (download instructions are in README.md — don't commit Flickr8k)
+data/raw/
+data/processed/
+
+# Trained weights (large, regenerable via train.py)
+checkpoints/*.pt
+checkpoints/*.tmp
+
+# Generated outputs (regenerable via evaluate.py / plot_curves.py / error_analysis.py)
+# keep outputs/ tracked if you want to show real results — uncomment to exclude:
+# outputs/
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# node_modules (only needed if you re-run `npm install pptxgenjs` locally
+# to regenerate presentation/presentation.pptx via make_slides.js)
+node_modules/
+
+# QA artifacts from converting the deck to images (pdftoppm/soffice)
+presentation/*.pdf
+presentation/slide-*.jpg
+
+# Streamlit local config/secrets, if you ever add one
+.streamlit/

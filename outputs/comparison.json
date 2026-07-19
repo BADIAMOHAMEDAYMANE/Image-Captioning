@@ -1,0 +1,35 @@
+[
+  {
+    "model": "lstm",
+    "params_M": 3.7,
+    "best_epoch": 9,
+    "val_loss": 0.607,
+    "sec_per_epoch": 1.0,
+    "BLEU-1": 0.8095,
+    "BLEU-2": 0.7034,
+    "BLEU-3": 0.5484,
+    "BLEU-4": 0.3424
+  },
+  {
+    "model": "attention",
+    "params_M": 7.1,
+    "best_epoch": 38,
+    "val_loss": 1.018,
+    "sec_per_epoch": 3.0,
+    "BLEU-1": 0.2078,
+    "BLEU-2": 0.0937,
+    "BLEU-3": 0.0513,
+    "BLEU-4": 0.0
+  },
+  {
+    "model": "transformer",
+    "params_M": 13.7,
+    "best_epoch": 4,
+    "val_loss": 0.534,
+    "sec_per_epoch": 3.5,
+    "BLEU-1": 0.7778,
+    "BLEU-2": 0.7201,
+    "BLEU-3": 0.6713,
+    "BLEU-4": 0.6055
+  }
+]
