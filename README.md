@@ -1,5 +1,7 @@
 # Image Captioning — CNN+LSTM → +Attention → Transformer
 
+> **Status — work in progress.** The code for the three decoders, training, evaluation and the Streamlit demo is complete and has been verified end-to-end on dummy data (CPU). Full training on Flickr8k and the resulting BLEU scores have **not been published yet**; the BLEU ranges below are reference values, not results of this repository.
+
 A from-scratch image captioning system in PyTorch (see
 `image_captioning_guide.md` for the full theory). Three decoders share one
 pipeline, one training script and one evaluation protocol:
@@ -47,7 +49,7 @@ image-captioning/
 ├── app.py                   # phase 5: Streamlit demo (upload -> caption)
 ├── presentation/            # phase 5: slides (.pptx) + generator script
 ├── checkpoints/             # best model saved here
-└── outputs/                 # training logs, eval results, figures
+└── outputs/                 # training logs, eval results, figures (currently from the dummy-data test run)
 ```
 
 ## Setup (your GPU machine)
@@ -119,7 +121,7 @@ pip install streamlit
 streamlit run app.py            # upload photo -> caption (+ heatmaps)
 ```
 
-Expected on Flickr8k: baseline **BLEU-4 ≈ 0.17–0.21**; attention
+Reference ranges commonly reported on Flickr8k (not yet measured in this repository): baseline **BLEU-4 ≈ 0.17–0.21**; attention
 **≈ 0.21–0.25** with interpretable heatmaps; transformer **≈ 0.22–0.27**.
 Training logs land in `outputs/training_log_<model>.csv` — plot train/val
 curves for your report. Notes: the attention model trains slower per epoch
